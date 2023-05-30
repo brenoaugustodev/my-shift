@@ -83,6 +83,10 @@ GEM
     bindex (0.8.1)
     bootsnap (1.15.0)
       msgpack (~> 1.2)
+    bootstrap (5.2.3)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 2.11.6, < 3)
+      sassc-rails (>= 2.0.0)
     builder (3.2.4)
     capybara (3.38.0)
       addressable
@@ -153,6 +157,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2022.0105)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.2)
     minitest (5.16.3)
     monetize (1.12.0)
       money (~> 6.12)
@@ -174,12 +179,12 @@ GEM
       net-protocol
     netrc (0.11.0)
     nio4r (2.5.8)
-    nokogiri (1.13.9-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.13.9-x86_64-linux)
+    nokogiri (1.13.9)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.4.5)
+    popper_js (2.11.7)
     public_suffix (5.0.0)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -263,6 +268,8 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2023.3)
+      tzinfo (>= 1.0.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
@@ -287,11 +294,13 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x64-mingw-ucrt
   x86_64-linux
 
 DEPENDENCIES
   autoprefixer-rails
   bootsnap
+  bootstrap (~> 5.0)
   capybara
   cloudinary
   debug
@@ -303,7 +312,7 @@ DEPENDENCIES
   jsbundling-rails
   letter_opener
   money-rails
-  pg (~> 1.1)
+  pg (~> 1.4.5, >= 1.4.5)
   puma (~> 5.0)
   pundit
   rails (~> 7.0.4)
@@ -320,7 +329,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 3.2.2p53
 
 BUNDLED WITH
    2.3.25

@@ -17,6 +17,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  username: <%= 'postgres' %>
+  password: <%= ENV["MY_SHIFT_DATABASE_PASSWORD"] || 'sql2023' %>
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -82,5 +84,3 @@ test:
 production:
   <<: *default
   database: my_shift_production
-  username: my_shift
-  password: <%= ENV["MY_SHIFT_DATABASE_PASSWORD"] %>
